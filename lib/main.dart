@@ -1,6 +1,4 @@
 import 'dart:ui';
-
-import 'package:autorevive/env/config.dart';
 import 'package:autorevive/helpers/dependancy_injaction.dart';
 import 'package:autorevive/pregentaitions/widgets/no_internet_screen.dart';
 import 'package:autorevive/services/firebase_notification_services.dart';

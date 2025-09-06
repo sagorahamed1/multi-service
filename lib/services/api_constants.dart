@@ -1,8 +1,8 @@
 class ApiConstants{
   // static const String baseUrl = "http://192.168.10.80:8080/api/v1";
   // static const String imageBaseUrl = "http://192.168.10.80:8080";
-  static const String baseUrl = "https://auto-revive-mamun.sarv.live/api/v1";
-  static const String imageBaseUrl = "https://auto-revive-mamun.sarv.live/uploads";
+  static const String baseUrl = "https://server.fixitprosapp.com/api/v1";
+  static const String imageBaseUrl = "https://server.fixitprosapp.com/uploads";
 
 
 
