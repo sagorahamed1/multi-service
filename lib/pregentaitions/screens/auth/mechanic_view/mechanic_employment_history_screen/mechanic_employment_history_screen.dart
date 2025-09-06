@@ -177,7 +177,7 @@ class _MechanicEmploymentHistoryScreenState extends State<MechanicEmploymentHist
                   children: [
                     SizedBox(height: 8.h),
                     ///<<<=============>>> LinearIndicator <<<===============>>>
-                    const CustomLinearIndicator(
+                    if (!isEdit) CustomLinearIndicator(
                       progressValue: 0.4,
                     ),
                     SizedBox(height: 20.h),

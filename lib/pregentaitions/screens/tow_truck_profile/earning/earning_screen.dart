@@ -127,6 +127,7 @@ class _EarningScreenState extends State<EarningScreen> {
           ),
           Obx(
             () => paymentController.paymentHistoryLoading.value
+
                 ? const CustomLoader()
                 : (paymentController.paymentHistory.value.history?.isEmpty ?? true)
                     ? const Center(child: NoDataFoundCard())

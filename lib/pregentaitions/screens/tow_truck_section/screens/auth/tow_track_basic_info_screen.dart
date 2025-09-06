@@ -96,7 +96,7 @@ class _TowTrackBasicInfoScreenState extends State<TowTrackBasicInfoScreen> {
           ) : Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const CustomLinearIndicator(
+              if (!isEdit) CustomLinearIndicator(
                 progressValue: 0.03,
                 label: 0,
               ),

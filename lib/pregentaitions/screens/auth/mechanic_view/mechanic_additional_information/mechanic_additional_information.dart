@@ -84,9 +84,7 @@ class _MechanicAdditionalInformationScreenState extends State<MechanicAdditional
               children: [
                 SizedBox(height: 8.h),
                 ///<<<=============>>> LinearIndicator <<<===============>>>
-                const CustomLinearIndicator(
-                  progressValue: 0.8,
-                ),
+                if (!isEdit)  CustomLinearIndicator(progressValue: 0.8),
                 SizedBox(height: 20.h),
                 CustomText(text: "Why do you want to work with Fix It Pros LLC.",
                     maxline: 2,

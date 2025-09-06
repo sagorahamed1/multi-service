@@ -93,7 +93,7 @@ class _CompanyInformationScreenState extends State<CompanyInformationScreen> {
           ) : Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const CustomLinearIndicator(
+              if (!isEdit) CustomLinearIndicator(
                 progressValue: 0.1,
               ),
               SizedBox(height: 16.h),

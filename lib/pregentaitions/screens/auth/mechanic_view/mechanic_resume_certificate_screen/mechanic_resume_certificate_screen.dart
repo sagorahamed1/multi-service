@@ -108,7 +108,7 @@ class _MechanicResumeCertificateScreenState extends State<MechanicResumeCertific
               children: [
                 SizedBox(height: 8.h),
                 ///<<<=============>>> LinearIndicator <<<===============>>>
-                const CustomLinearIndicator(
+                if (!isEdit) CustomLinearIndicator(
                   progressValue: 0.9,
                 ),
                 SizedBox(height: 20.h),

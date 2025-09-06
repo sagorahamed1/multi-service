@@ -186,7 +186,7 @@ class _VehicleEquipmentScreenState extends State<VehicleEquipmentScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const CustomLinearIndicator(progressValue: 0.3),
+                if (!isEdit) CustomLinearIndicator(progressValue: 0.3),
                 SizedBox(height: 24.h),
                 CustomText(
                   text: 'List of all tow trucks in your fleet.',
