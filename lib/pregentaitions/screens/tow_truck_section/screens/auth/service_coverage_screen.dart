@@ -110,7 +110,7 @@ class _ServiceCoverageScreenState extends State<ServiceCoverageScreen> {
               : Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const CustomLinearIndicator(
+              if (!isEdit) CustomLinearIndicator(
                 progressValue: 0.8,
               ),
               SizedBox(height: 24.h),

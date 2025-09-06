@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:autorevive/services/api_constants.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 
 
@@ -24,7 +25,7 @@ class SocketServices {
 
 
     socket = IO.io(
-        'http://192.168.40.192:8080',
+        ApiConstants.socketUrl,
         // '${ApiConstants.imageBaseUrl}?token=$token',
         IO.OptionBuilder()
             .setTransports(['websocket'])

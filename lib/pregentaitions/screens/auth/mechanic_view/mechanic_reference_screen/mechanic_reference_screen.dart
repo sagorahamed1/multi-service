@@ -157,7 +157,7 @@ class _MechanicReferenceScreenState extends State<MechanicReferenceScreen> {
             child: Column(
               children: [
                 SizedBox(height: 8.h),
-                const CustomLinearIndicator(progressValue: 0.6),
+                if (!isEdit) CustomLinearIndicator(progressValue: 0.6),
                 SizedBox(height: 20.h),
                 ListView.builder(
                   shrinkWrap: true,

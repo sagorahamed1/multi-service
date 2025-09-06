@@ -1,10 +1,8 @@
 
-
 import 'dart:convert';
 import 'dart:ui';
 import 'package:autorevive/controllers/current_location_controller.dart';
 import 'package:autorevive/controllers/live_location_change_controller.dart';
-import 'package:autorevive/env/config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,6 +11,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
+import '../../../../../config.dart';
 import '../../../../widgets/mechanic_profile_card.dart';
 
 class MechanicMapScreen extends StatefulWidget {

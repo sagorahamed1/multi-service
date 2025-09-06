@@ -116,7 +116,7 @@ class _MechanicPersonalInformationScreenState extends State<MechanicPersonalInfo
                 children: [
                   SizedBox(height: 8.h),
                   ///<<<=============>>> LinearIndicator <<<===============>>>
-                  const CustomLinearIndicator(
+                  if (!isEdit) CustomLinearIndicator(
                     progressValue: 0.03,
                     label: 0,
                   ),

@@ -107,7 +107,7 @@ class _BusinessRequirementScreenState extends State<BusinessRequirementScreen> {
           ) : Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const CustomLinearIndicator(
+              if (!isEdit) CustomLinearIndicator(
                 progressValue: 0.94,
                 label: 100,
               ),
