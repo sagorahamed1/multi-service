@@ -62,5 +62,6 @@ class ApiConstants{
   static const String towTrackVehicleEndPoint = "/tow-truck/vehicles";
   static const String towTrackServiceCoverageEndPoint = "/tow-truck/service-coverage";
   static const String towBusinessRequirementsEndPoint = "/tow-truck/business-req";
+  static const String deleteEndPoint = "/user/me";
 
 }

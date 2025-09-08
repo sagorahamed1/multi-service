@@ -18,6 +18,21 @@ import '../services/api_constants.dart';
 
 class AuthController extends GetxController {
 
+  bool isChecked = false;
+  bool isCheckboxError = false;
+  RxBool isObscure = true.obs;
+  RxBool isObscureConfirmPassword = true.obs;
+
+  toggleIsObscure() {
+    isObscure.value = !isObscure.value;
+  }
+
+  toggleIsObscureConfirmPassword() {
+    isObscureConfirmPassword.value = !isObscureConfirmPassword.value;
+  }
+
+
+
 
   RxBool signUpLoading = false.obs;
 
@@ -523,7 +538,23 @@ class AuthController extends GetxController {
   }
 
 
+  var deleteLoading = false.obs;
 
+  userDelete() async {
+
+
+    deleteLoading(true);
+    var response = await ApiClient.deleteData(
+        ApiConstants.deleteEndPoint);
+    print('==================================================${response.body}');
+    if (response.statusCode == 200) {
+      ToastMessageHelper.showToastMessage('Delete Successful');
+
+    } else {
+      deleteLoading(false);
+    }
+
+  }
 
 
 
