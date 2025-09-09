@@ -12,6 +12,7 @@ import 'core/config/app_themes/app_themes.dart';
 
 void main() async{
 
+
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await FirebaseMessaging.instance;
@@ -60,3 +61,9 @@ class MyApp extends StatelessWidget {
 
 
 
+
+
+
+
+
+//sagor
