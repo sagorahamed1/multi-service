@@ -537,19 +537,18 @@ class AuthController extends GetxController {
     }
   }
 
+  ///=============== Delete Account ================<>
+
 
   var deleteLoading = false.obs;
-
-  userDelete() async {
-
+  userDelete(BuildContext context) async {
 
     deleteLoading(true);
     var response = await ApiClient.deleteData(
         ApiConstants.deleteEndPoint);
-    print('==================================================${response.body}');
     if (response.statusCode == 200) {
-      ToastMessageHelper.showToastMessage('Delete Successful');
-
+      ToastMessageHelper.showToastMessage('Account Delete Successfully');
+      context.pushNamed(AppRoutes.logInScreen);
     } else {
       deleteLoading(false);
     }
