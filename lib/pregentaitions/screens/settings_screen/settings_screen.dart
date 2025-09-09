@@ -168,8 +168,7 @@ class _SettingScreenState extends State<SettingScreen> {
                                       side: BorderSide(color: Colors.black, width: 1.5.w),
                                     ),
                                     onPressed: () {
-                                      _authController.userDelete(
-                                      );
+                                      _authController.userDelete(context);
 
                                     },
                                     child: Text(

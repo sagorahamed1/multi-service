@@ -8,6 +8,8 @@ class ApiConstants{
 
 
 
+
+
   static const String signUpEndPoint = "/auth/register";
   static const String loginUpEndPoint = "/auth/login";
   static const String changePassword = "/auth/change-password";
