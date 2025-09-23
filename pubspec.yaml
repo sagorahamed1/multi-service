@@ -78,6 +78,7 @@ flutter_icons:
   adaptive_icon_foreground: "assets/images/app_logo.png"
   adaptive_icon_background: "#00A572"
 
+
 flutter_gen:
   output: lib/global/custom_assets/ # Optional (default: lib/gen/)
   line_length: 80 # Optional (default: 80)
