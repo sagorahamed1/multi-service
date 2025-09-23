@@ -64,7 +64,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '20978497970',
     projectId: 'auto-revive-b',
     storageBucket: 'auto-revive-b.firebasestorage.app',
-    iosBundleId: 'com.example.autorevive',
+    iosBundleId: 'com.fixitprosllc.fixitprosllc',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -73,7 +73,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '20978497970',
     projectId: 'auto-revive-b',
     storageBucket: 'auto-revive-b.firebasestorage.app',
-    iosBundleId: 'com.example.autorevive',
+    iosBundleId: 'com.fixitprosllc.fixitprosllc',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
