@@ -97,10 +97,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
                     (value) {
                   if (widget.isEmail == false) {
                     if (value!.isEmpty) {
-                      return "Please enter ${widget.hintText?.toLowerCase()}";
+                      return "Please ${widget.hintText?.toLowerCase()}";
                     } else if (widget.isPassword) {
                       if (value.isEmpty) {
-                        return "Please enter ${widget.hintText?.toLowerCase()}";
+                        return "Please ${widget.hintText?.toLowerCase()}";
                       } else if (value.length < 8 || !AppConstants.validatePassword(value)) {
                         return "Password: 8 characters min, letters & digits \nrequired";
                       }
@@ -108,7 +108,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                   } else {
                     bool data = AppConstants.emailValidate.hasMatch(value!);
                     if (value.isEmpty) {
-                      return "Please enter ${widget.hintText!.toLowerCase()}";
+                      return "Please ${widget.hintText!.toLowerCase()}";
                     } else if (!data) {
                       return "Please check your email!";
                     }

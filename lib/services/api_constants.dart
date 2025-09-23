@@ -4,6 +4,11 @@ class ApiConstants{
   static const String baseUrl = "https://server.fixitprosapp.com/api/v1";
   static const String imageBaseUrl = "https://server.fixitprosapp.com/uploads";
 
+  static const String socketUrl = "https://server.fixitprosapp.com";
+
+
+
+
 
 
 
@@ -61,5 +66,6 @@ class ApiConstants{
   static const String towTrackVehicleEndPoint = "/tow-truck/vehicles";
   static const String towTrackServiceCoverageEndPoint = "/tow-truck/service-coverage";
   static const String towBusinessRequirementsEndPoint = "/tow-truck/business-req";
+  static const String deleteEndPoint = "/user/me";
 
 }

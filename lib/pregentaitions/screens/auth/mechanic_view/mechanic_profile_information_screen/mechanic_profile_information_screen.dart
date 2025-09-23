@@ -75,11 +75,13 @@ class _MechanicProfileInformationScreenState extends State<MechanicProfileInform
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              CustomText(
-                                text: mechanicController.profile.value.name ?? 'N/A',
-                                fontsize: 25.sp,
-                                fontWeight: FontWeight.w400,
-                                color: AppColors.textColor151515,
+                              Expanded(
+                                child: CustomText(
+                                  text: mechanicController.profile.value.name ?? 'N/A',
+                                  fontsize: 25.sp,
+                                  fontWeight: FontWeight.w400,
+                                  color: AppColors.textColor151515,
+                                ),
                               ),
                               SizedBox(width: 4.w),
 

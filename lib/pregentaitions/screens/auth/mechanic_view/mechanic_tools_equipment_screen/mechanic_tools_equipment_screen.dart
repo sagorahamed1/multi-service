@@ -126,7 +126,7 @@ class _MechanicToolsEquipmentScreenState extends State<MechanicToolsEquipmentScr
               children: [
                 SizedBox(height: 8.h),
                 ///<<<=============>>> LinearIndicator <<<===============>>>
-                const CustomLinearIndicator(
+                if (!isEdit) CustomLinearIndicator(
                   progressValue: 0.3,
                 ),
                 SizedBox(height: 29.h),

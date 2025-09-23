@@ -110,7 +110,7 @@ class _LicensingAndComplianceScreenState extends State<LicensingAndComplianceScr
           ) : Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const CustomLinearIndicator(
+              if (!isEdit) CustomLinearIndicator(
                 progressValue: 0.2,
               ),
               SizedBox(height: 16.h),
