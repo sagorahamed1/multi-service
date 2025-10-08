@@ -1,0 +1,2 @@
+/Users/bdcalling/StudioProjects/autorevive/android/app/.cxx/Debug/5p2f1mc2/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/bdcalling/StudioProjects/autorevive/android/app/.cxx/Debug/5p2f1mc2/armeabi-v7a/CMakeFiles/rebuild_cache.dir
