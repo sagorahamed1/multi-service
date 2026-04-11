@@ -59,6 +59,8 @@ dependencies:
   firebase_analytics: ^11.4.6
   flutter_widget_from_html:
   webview_flutter: ^4.13.0
+  google_places_flutter:
+  flutter_google_maps_webservices:
 
 
 

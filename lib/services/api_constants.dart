@@ -3,9 +3,14 @@ class ApiConstants{
   // static const String imageBaseUrl = "http://192.168.10.80:8080";
 
 
-  static const String baseUrl = "https://server.fixitprosapp.com/api/v1";
-  static const String imageBaseUrl = "https://server.fixitprosapp.com/uploads";
-  static const String socketUrl = "https://server.fixitprosapp.com";
+  // static const String baseUrl = "https://server.fixitprosapp.com/api/v1";
+  // static const String imageBaseUrl = "https://server.fixitprosapp.com/uploads";
+  // static const String socketUrl = "https://server.fixitprosapp.com";
+
+
+  static const String baseUrl = "https://6c0hk6c2-8080.inc1.devtunnels.ms/api/v1";
+  static const String imageBaseUrl = "https://6c0hk6c2-8080.inc1.devtunnels.ms/uploads";
+  static const String socketUrl = "https://6c0hk6c2-8080.inc1.devtunnels.ms";
 
 
   static const String signUpEndPoint = "/auth/register";

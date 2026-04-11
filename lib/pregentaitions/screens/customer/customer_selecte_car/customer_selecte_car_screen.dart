@@ -8,9 +8,11 @@ import 'package:autorevive/pregentaitions/widgets/custom_popup_menu.dart';
 import 'package:autorevive/pregentaitions/widgets/custom_text.dart';
 import 'package:autorevive/pregentaitions/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_google_maps_webservices/places.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_places_flutter/google_places_flutter.dart';
 import 'package:location_picker_text_field/open_street_location_picker.dart';
 
 import '../../../../controllers/current_location_controller.dart';
@@ -46,6 +48,9 @@ class _CustomerSelectCarScreenState extends State<CustomerSelectCarScreen> {
   double distance = 0;
   double lat = 0;
   double log = 0;
+
+  final places = GoogleMapsPlaces(
+      apiKey: "AIzaSyA-Iri6x5mzNv45XO3a-Ew3z4nvF4CdYo0");
 
   @override
   Widget build(BuildContext context) {
@@ -103,25 +108,85 @@ class _CustomerSelectCarScreenState extends State<CustomerSelectCarScreen> {
             
             
             
-                                    Container(
-                                      decoration: BoxDecoration(
+                                    // Container(
+                                    //   decoration: BoxDecoration(
+                                    //     borderRadius: BorderRadius.circular(10.r),
+                                    //       color: const Color(0xffE6E6FF)
+                                    //   ),
+                                    //   child: LocationPicker(
+                                    //     label: "",
+                                    //     controller: locationName,
+                                    //     onSelect: (data){
+                                    //       locationName.text = data.displayname;
+                                    //      distance =  controller.calculateDistanceInMiles(data.latitude, data.longitude);
+                                    //      log = data.longitude;
+                                    //      lat = data.latitude;
+                                    //      setState(() {});
+                                    //
+                                    //     },
+                                    //   ),
+                                    // ),
+                                    //
+
+
+                                    GooglePlaceAutoCompleteTextField(
+                                      focusNode: FocusNode(), // Add a focus node if needed
+                                      textEditingController: locationName,
+                                      googleAPIKey: "AIzaSyA-Iri6x5mzNv45XO3a-Ew3z4nvF4CdYo0",
+                                      inputDecoration: InputDecoration(
+                                        hintText: "Select location",
+                                        filled: true,
+                                        fillColor: const Color(0xffE6E6FF),
+                                        border: OutlineInputBorder(
+                                          borderSide: BorderSide(color: Colors.transparent, width: 0.05),
+                                          borderRadius: BorderRadius.circular(10.r),
+                                        ),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(color: Colors.transparent, width: 0.05),
+                                          borderRadius: BorderRadius.circular(10.r),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(color: Colors.transparent, width: 0.05),
+                                          borderRadius: BorderRadius.circular(10.r),
+                                        ),
+                                        contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
+                                      ),
+                                      boxDecoration: BoxDecoration(
+                                        color: const Color(0xffE6E6FF),
+                                        border: Border.all(color: Colors.transparent),
                                         borderRadius: BorderRadius.circular(10.r),
-                                          color: const Color(0xffE6E6FF)
                                       ),
-                                      child: LocationPicker(
-                                        label: "",
-                                        controller: locationName,
-                                        onSelect: (data){
-                                          locationName.text = data.displayname;
-                                         distance =  controller.calculateDistanceInMiles(data.latitude, data.longitude);
-                                         log = data.longitude;
-                                         lat = data.latitude;
-                                         setState(() {});
-            
-                                        },
-                                      ),
+                                      isLatLngRequired: true,
+                                      getPlaceDetailWithLatLng: (prediction) async {
+                                        // Get place details to extract lat/lng
+                                        final detail = await places.getDetailsByPlaceId(prediction.placeId!);
+
+                                        // Extract latitude and longitude
+                                        final lat = detail.result.geometry?.location.lat;
+                                        final lng = detail.result.geometry?.location.lng;
+
+                                        if (lat != null && lng != null) {
+                                          // Calculate distance using your existing method
+                                          distance = controller.calculateDistanceInMiles(lat, lng);
+                                          log = lng;
+                                          this.lat = lat;
+                                          setState(() {});
+                                        }
+                                      },
+                                      itemClick: (prediction) {
+                                        locationName.text = prediction.description ?? "";
+                                        locationName.selection = TextSelection.fromPosition(
+                                          TextPosition(offset: prediction.description?.length ?? 0),
+                                        );
+                                      },
+                                      // Optional: Add validator if needed
+                                      // validator: (value, prediction) {
+                                      //   if (value == null || value.isEmpty) {
+                                      //     return "Location required";
+                                      //   }
+                                      //   return null;
+                                      // },
                                     ),
-            
             
             
             

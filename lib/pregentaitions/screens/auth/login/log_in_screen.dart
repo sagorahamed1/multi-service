@@ -83,7 +83,7 @@ class LogInScreen extends StatelessWidget {
                        title: "Let's Go", onpress: (){
                      if (_logKey.currentState!.validate()) {
                        authController.handleLogIn(
-                           emailCtrl.text, passCtrl.text.trim(), context: context);
+                           emailCtrl.text.trim(), passCtrl.text.trim(), context: context);
                      }
 
 

@@ -35,6 +35,12 @@ class _CustomerBookingDetailsScreenState
   TextEditingController ratingCommentCtrl = TextEditingController();
 
   @override
+  void initState() {
+    bookingController.customerInitPaymentLoading.value = false;
+    super.initState();
+  }
+
+  @override
   void dispose() {
     bookingController.services.clear();
     bookingController.totalPrice?.value = "";
